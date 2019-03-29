@@ -1,8 +1,9 @@
 var x = 0;
 function addItem()
-{ // The strange indentation is just for organization. probably not standard but...
+{ // The strange indentation is just for organization. Definetely not standard but...
   x += 1;
-  var todoItem = document.getElementById("newItem").value;
+  var todoItem = String(document.getElementById("newItem").value);
+  console.log(todoItem.length);
   document.getElementById("newItem").value = "";
   var element = document.getElementById("todo");
 
@@ -36,6 +37,6 @@ function completed(x)
 function unComplete(x)
 {
   var element = document.getElementById('li' + x);
-    element.setAttribute('style', 'background-color:transparent;');
+    element.setAttribute('style', 'background-color:white;');
     element.setAttribute('onclick', 'completed('+x+')');
 }
